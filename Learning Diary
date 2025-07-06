@@ -1,0 +1,62 @@
+Lappeenrannan teknillinen yliopisto
+Oulun yliopisto
+
+
+
+Software Development Skills Mobile, Online course
+
+Kseniia Lukovkina, 003053559
+
+
+LEARNING DIARY, MOBILE MODULE
+
+June 11:
+I read the course materials and installed Android Studio.
+Watched a video and learned what the development environment looks like, how to use the layout editor and constraints (how to set anchors).
+Learned how to add a text field and a button and how to run the application.
+Created a simple app that adds two numbers and displays the result.
+I also learned the basics of debugging in Android Studio.
+
+June 18:
+I watched another video and learned what an Intent is and how to move to another screen (Activity).
+Used onClick to trigger an event.
+Built a small app where you can press a button to open the Google website.
+
+June 25:
+Studied how to use ListView, how to add and scale images properly.
+Learned how to retrieve data from strings.xml (string-array), and use an Adapter to display this data in a list.
+
+June 26:
+I started building my own application.
+I used three example videos as a base, but I wanted to develop and improve the idea.
+Added a counter to the shopping cart, the ability to add selected products, and the ability to remove items from the cart.
+I created Cart and CartActivity classes:
+•	Cart class handles all calculations and stores product quantities.
+•	CartActivity is responsible for displaying the cart and the total price.
+I also created a Product class with equals() and hashCode() overrides so that items can be compared and stored correctly in a HashMap.
+The list of items is stored using an ArrayList.
+
+June 29:
+The development process faced some challenges, such as app crashes, but debugging helped identify and resolve the issues.
+One problem was with item price types:
+Prices were stored as strings, but needed to be converted to double for calculations and rounding.
+I used Double.parseDouble() to fix this issue.
+
+July 3:
+I added Toast notifications when an item is added ("Item added") in DetailActivity class.
+I also implemented the decreaseItem() function and a confirmation alert in the cart when a user removes items.
+This made the cart more interactive and complete.
+
+July 5:
+I made final UI and layout changes:
+•	Set a new background color using colors.xml.
+•	Added an ImageButton for the shopping cart.
+•	Adjusted fonts and element placement.
+•	I styled buttons by changing the corner radius and added custom colors.
+•	I downloaded and added product images for each item.
+•	I changed item names to match the coffee shop theme (e.g., Latte, Espresso).
+•	I also added "Back" buttons to return from CartActivity and DetailActivity to the main screen.
+
+
+
+
