@@ -8,28 +8,28 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.util.List;
+
 public class ItemAdapter extends BaseAdapter {
 
     LayoutInflater mInflater;
-    String[] items;
-    String[] prices;
+    List<Product> products;
     String[] descriptions;
 
-    public ItemAdapter(Context c, String[] i, String[] p, String[] d) {
-        items = i;
-        prices = p;
-        descriptions = d;
+    public ItemAdapter(Context c, List<Product> products, String[] d) {
+        this.products = products;
+        this.descriptions = d;
         mInflater = (LayoutInflater) c.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
     @Override
     public int getCount() {
-        return items.length;
+        return products.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return items[position];
+        return products.get(position);
     }
 
     @Override
@@ -44,13 +44,13 @@ public class ItemAdapter extends BaseAdapter {
         TextView descriptionTextView = (TextView) v.findViewById(R.id.descriptionTextView);
         TextView priceTextView = (TextView) v.findViewById(R.id.priceTextView);
 
-        String name = items[position];
+        Product product = products.get(position);
         String desc = descriptions[position];
-        String price = prices[position];
 
-        nameTextView.setText(name);
+
+        nameTextView.setText(product.name);
         descriptionTextView.setText(desc);
-        priceTextView.setText(price);
+        priceTextView.setText("$" + product.price);
 
         return v;
     }

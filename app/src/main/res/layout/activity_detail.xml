@@ -5,16 +5,74 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/brown"
     tools:context=".DetailActivity">
 
     <ImageView
         android:id="@+id/imageView"
+        android:layout_width="305dp"
+        android:layout_height="275dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.374"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/addToCartButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:backgroundTint="@color/dbrown"
+        android:fontFamily="sans-serif-black"
+        android:text="Add to cart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/productPrice" />
+
+    <TextView
+        android:id="@+id/productName"
+        android:layout_width="285dp"
+        android:layout_height="38dp"
+        android:fontFamily="serif"
+        android:text="Name"
+        android:textAlignment="center"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:layout_constraintVertical_bias="0.139" />
+
+    <TextView
+        android:id="@+id/productPrice"
+        android:layout_width="127dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="serif"
+        android:text="Price"
+        android:textAlignment="center"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="@color/dbrown"
+        android:padding="12dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@android:color/white" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

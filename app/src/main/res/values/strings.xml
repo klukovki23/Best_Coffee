@@ -1,19 +1,29 @@
 <resources>
     <string name="app_name">My Application3</string>
     <string-array name="items">
-        <item>peach</item>
-        <item>tomato</item>
-        <item>carrot</item>
+        <item>Summer Iced Matcha</item>
+        <item>Iced Tea Lemon</item>
+        <item>Mocha Latte</item>
+        <item>Espresso</item>
+        <item>Brownie</item>
+
     </string-array>
     <string-array name="prices">
-        <item>$0.99</item>
-        <item>$1.49</item>
-        <item>$0.89</item>
+        <item>$6.99</item>
+        <item>$3.49</item>
+        <item>$5.99</item>
+        <item>$3.99</item>
+        <item>$3.99</item>
+
     </string-array>
     <string-array name="descriptions">
-        <item>Fresh peaches from Georgia</item>
-        <item>Fresh salad tomatoes from Ohio</item>
-        <item>Fresh carrot from Atlanta</item>
+        <item>Matcha with strawberry foam</item>
+        <item>Delicious iced tea with mint</item>
+        <item>Latte with chocolate and whipped cream</item>
+        <item>Hot espresso</item>
+        <item>Milk chocolate brownie</item>
+
+
     </string-array>
     <string name="title_activity_detail">DetailActivity</string>
 </resources>

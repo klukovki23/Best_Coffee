@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
 
 import androidx.activity.EdgeToEdge;
@@ -13,6 +15,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -37,7 +42,15 @@ public class MainActivity extends AppCompatActivity {
         prices = res.getStringArray(R.array.prices);
         descriptions = res.getStringArray(R.array.descriptions);
 
-        ItemAdapter itemAdapter = new ItemAdapter(this, items, prices, descriptions);
+
+        List<Product> productList = new ArrayList<>();
+
+        for (int i = 0; i < items.length; i++) {
+            double price = Double.parseDouble(prices[i].replace("$", ""));
+            productList.add(new Product(items[i], price));
+        }
+
+        ItemAdapter itemAdapter = new ItemAdapter(this, productList, descriptions);
         myListView.setAdapter(itemAdapter);
 
         myListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -48,6 +61,13 @@ public class MainActivity extends AppCompatActivity {
                 showDetailActivity.putExtra("com.example.ITEM_POSITION", position);
                 startActivity(showDetailActivity);
             }
+        });
+
+        ImageButton cartButton = findViewById(R.id.showCartButton);
+        
+        cartButton.setOnClickListener(v -> {
+            Intent showCartActivity = new Intent(getApplicationContext(), CartActivity.class);
+            startActivity(showCartActivity);
         });
     }
 
