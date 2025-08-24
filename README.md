@@ -17,5 +17,8 @@ Click the Run button to build and launch the app or click on MainActivity.java i
 
 <img width="241" height="543" alt="Näyttökuva 2025-08-24 173450" src="https://github.com/user-attachments/assets/b8abcc81-5a11-4817-8969-5f6a422c3b47" />
 
+<img width="241" height="543" alt="Näyttökuva 2025-08-24 173506" src="https://github.com/user-attachments/assets/a99be7ca-8c03-415f-9cf9-46b431dec0a5" />
+
+
 
 
